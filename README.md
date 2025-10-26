@@ -1,3 +1,1 @@
-# thecomputationalguy.github.io
-
-Hello World!
+This is Khalid Shaikh
