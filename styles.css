@@ -48,6 +48,20 @@ nav a:hover {
   color: white;
 }
 
+main a {
+  font-weight: 500;
+}
+
+/* if you want links in paragraphs to blend better */
+p a {
+  color: var(--accent);
+  border-bottom: 1px solid rgba(79,140,255,0.4);
+  padding-bottom: 1px;
+}
+p a:hover {
+  border-bottom-color: var(--accent);
+}
+
 .hero{background:rgba(255,255,255,0.03); padding:24px; border-radius:12px}
 
 .features{display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:12px; margin-top:18px}
