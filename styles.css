@@ -38,10 +38,10 @@ body{
 
 .site-header h1{margin:0; font-size:20px}
 
-a:hover, a:focus {
+/* a:hover, a:focus {
   text-decoration: underline;
   color: #fff;
-}
+} */
 
 nav a{
   color:var(--muted); 
