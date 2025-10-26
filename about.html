@@ -1,21 +1,9 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-        <title>About — Your Name</title>
-        <link rel="stylesheet" href="/styles.css">
-    </head>
+    <head id="head-placeholder"></head>
 <body>
-
-    <header class="site-header">
-    <h1>Your Name</h1>
-    <nav>
-        <a href="/">Home</a>
-        <a href="/about.html">About</a>
-        <a href="/projects.html">Projects</a>
-        <a href="/contact.html">Contact</a>
-    </nav>
-    </header>
+    <div id="header-placeholder"></div>
+    
     <main class="container">
     <h2>About</h2>
     <p>Short bio. Two to four sentences describing who you are and what you do.</p>
@@ -26,12 +14,20 @@
         <li>Web / tools</li>
     </ul>
     </main>
+
     <div id="footer-placeholder"></div>
+
     <script>
-    fetch('footer.html')
-    .then(r => r.text())
-    .then(t => document.getElementById('footer-placeholder').innerHTML = t);
-    </script>
+    async function loadFragment(id, file) {
+      const el = document.getElementById(id);
+      const res = await fetch(file);
+      el.innerHTML = await res.text();
+    }
+    loadFragment('head-placeholder', 'head.html');
+    loadFragment('header-placeholder', 'header.html');
+    loadFragment('footer-placeholder', 'footer.html');
+  </script>
+
     <script src="https://kit.fontawesome.com/c7c197e250.js" crossorigin="anonymous"></script>
 </body>
 </html>
