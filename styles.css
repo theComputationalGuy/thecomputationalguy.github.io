@@ -19,8 +19,8 @@ nav a{color:var(--muted); margin-left:14px; text-decoration:none}
 footer{padding:20px 16px; text-align:center; color:var(--muted)}
 
 .profile-img {
-  width: 140px;
-  height: 140px;
+  width: 280px;
+  height: 280px;
   border-radius: 50%;
   object-fit: cover;
   display: block;
