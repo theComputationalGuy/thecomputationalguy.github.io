@@ -1,5 +1,113 @@
 <!doctype html>
 <html lang="en">
+<head id="head-placeholder"></head>
+<body>
+  <div id="header-placeholder"></div>
+
+  <main class="container projects-page">
+    <h1>Projects</h1>
+    <p class="intro">Selected technical and research projects. Each entry includes a short description, tools used, and relevant links.</p>
+
+    <section class="project">
+      <h2>DUST3R Implementation</h2>
+      <p>Modular, reproducible reimplementation of <strong>DUST3R</strong> for 3D correspondence learning and physics-guided generation. Focused on evaluation reproducibility and component ablations.</p>
+      <p class="meta"><small>Tech: PyTorch, torchvision, Open3D, NumPy</small></p>
+      <p class="links">
+        <a href="https://github.com/<USERNAME>/dust3r" class="card-link">Code</a> |
+        <a href="https://arxiv.org/abs/2306.05399" class="card-link">Paper</a>
+      </p>
+    </section>
+
+    <section class="project">
+      <h2>DreamFusion Reproduction</h2>
+      <p>Implementation of the <strong>DreamFusion</strong> text-to-3D paper with stable optimization and guidance weighting experiments. Features stable diffusion integration and CLIP-space supervision.</p>
+      <p class="meta"><small>Tech: Stable Diffusion, CLIP, PyTorch3D</small></p>
+      <p class="links">
+        <a href="https://github.com/<USERNAME>/dreamfusion" class="card-link">Code</a> |
+        <a href="https://dreamfusion-paper-link" class="card-link">Paper</a>
+      </p>
+    </section>
+
+    <section class="project">
+      <h2>Physics-based Neural Systems</h2>
+      <p>Exploration of neural operators for integrating differentiable physics into generative 3D pipelines. Used to model deformation, motion, and stability of generated meshes.</p>
+      <p class="meta"><small>Tech: Neural Operators, PDE solvers, JAX</small></p>
+      <p class="links">
+        <a href="https://github.com/<USERNAME>/pbnn" class="card-link">Code</a>
+      </p>
+    </section>
+
+    <section class="project">
+      <h2>MLOps for Research Deployment</h2>
+      <p>End-to-end reproducible ML pipeline with Dockerized training, GitHub Actions CI, and model registry integration. Enables large-scale experiment management.</p>
+      <p class="meta"><small>Tech: MLflow, Docker, GitHub Actions, Kubernetes</small></p>
+      <p class="links">
+        <a href="https://github.com/<USERNAME>/mlops-stack" class="card-link">Code</a>
+      </p>
+    </section>
+  </main>
+
+  <div id="footer-placeholder"></div>
+
+  <script>
+    async function loadFragment(id, file) {
+      const el = document.getElementById(id);
+      try {
+        const r = await fetch(file, {cache: "no-store"});
+        if (!r.ok) return;
+        el.innerHTML = await r.text();
+      } catch (e) {}
+    }
+    loadFragment('head-placeholder','head.html');
+    loadFragment('header-placeholder','header.html');
+    loadFragment('footer-placeholder','footer.html');
+  </script>
+
+  <style>
+    .projects-page {
+      max-width: 900px;
+      padding: 32px 16px 80px;
+      margin: 0 auto;
+    }
+    .intro {
+      color: var(--muted);
+      margin-bottom: 28px;
+    }
+    .project {
+      margin-bottom: 36px;
+      padding: 20px;
+      background: rgba(255,255,255,0.02);
+      border-radius: 10px;
+    }
+    .project h2 {
+      margin-top: 0;
+    }
+    .project p {
+      line-height: 1.5;
+    }
+    .meta {
+      color: var(--muted);
+      margin: 6px 0;
+    }
+    .links {
+      margin-top: 6px;
+    }
+    .card-link {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .card-link:hover {
+      text-decoration: underline;
+    }
+  </style>
+</body>
+</html>
+
+
+
+<!-- <!doctype html>
+<html lang="en">
 
 <head id="head-placeholder"></head>
 
@@ -37,4 +145,4 @@
   <script src="https://kit.fontawesome.com/c7c197e250.js" crossorigin="anonymous"></script>
 </body>
 
-</html>
+</html> -->
