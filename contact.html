@@ -1,5 +1,103 @@
 <!doctype html>
 <html lang="en">
+<head id="head-placeholder"></head>
+<body>
+  <div id="header-placeholder"></div>
+
+  <main class="container contact-page">
+    <h1>Contact</h1>
+    <p class="intro">For research collaboration, project inquiries, or technical discussions, reach out directly.</p>
+
+    <section class="contact-block">
+      <h2>Email</h2>
+      <p><a href="mailto:you@example.com" class="contact-link">you@example.com</a></p>
+    </section>
+
+    <section class="contact-block">
+      <h2>Profiles</h2>
+      <ul class="social-list">
+        <li><a href="https://github.com/<USERNAME>" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/<USERNAME>" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i> LinkedIn</a></li>
+        <li><a href="https://scholar.google.com/citations?user=<ID>" target="_blank" rel="noopener"><i class="fa-solid fa-graduation-cap"></i> Scholar</a></li>
+      </ul>
+    </section>
+
+    <section class="contact-block">
+      <h2>Optional contact form</h2>
+      <form action="https://formspree.io/f/your-form-id" method="POST" class="contact-form">
+        <label>
+          Name<br>
+          <input type="text" name="name" required>
+        </label>
+        <label>
+          Email<br>
+          <input type="email" name="email" required>
+        </label>
+        <label>
+          Message<br>
+          <textarea name="message" rows="5" required></textarea>
+        </label>
+        <button type="submit" class="btn">Send</button>
+      </form>
+      <p class="muted small">The form uses <a href="https://formspree.io" target="_blank" rel="noopener">Formspree</a> for secure delivery. Replace <code>your-form-id</code> with your ID.</p>
+    </section>
+  </main>
+
+  <div id="footer-placeholder"></div>
+
+  <script>
+    async function loadFragment(id, file) {
+      const el = document.getElementById(id);
+      try {
+        const r = await fetch(file, {cache: "no-store"});
+        if (!r.ok) return;
+        el.innerHTML = await r.text();
+      } catch (e) {}
+    }
+    loadFragment('head-placeholder','head.html');
+    loadFragment('header-placeholder','header.html');
+    loadFragment('footer-placeholder','footer.html');
+  </script>
+
+  <style>
+    .contact-page { max-width: 700px; padding: 32px 16px 80px; margin: 0 auto; }
+    .intro { color: var(--muted); margin-bottom: 24px; }
+    .contact-block { margin-bottom: 32px; background: rgba(255,255,255,0.02); padding: 20px; border-radius: 10px; }
+    .contact-block h2 { margin-top: 0; }
+    .contact-link { color: var(--accent); text-decoration: none; font-weight: 600; }
+    .contact-link:hover { text-decoration: underline; }
+    .social-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; }
+    .social-list a { color: var(--accent); text-decoration: none; font-weight: 600; }
+    .social-list a:hover { text-decoration: underline; }
+    .contact-form { display: grid; gap: 10px; margin-top: 12px; }
+    .contact-form input, .contact-form textarea {
+      width: 100%;
+      padding: 8px;
+      border-radius: 6px;
+      border: 1px solid rgba(255,255,255,0.1);
+      background: rgba(255,255,255,0.04);
+      color: #fff;
+      font-family: inherit;
+    }
+    .contact-form input:focus, .contact-form textarea:focus {
+      outline: 1px solid var(--accent);
+    }
+    .contact-form .btn {
+      width: fit-content;
+      padding: 8px 14px;
+      border: none;
+      cursor: pointer;
+      font-weight: 600;
+    }
+    .muted { color: var(--muted); }
+    .small { font-size: 13px; }
+  </style>
+</body>
+</html>
+
+
+<!-- <!doctype html>
+<html lang="en">
 
 <head id="head-placeholder"></head>
 
@@ -31,4 +129,4 @@
 
 </body>
 
-</html>
+</html> -->
