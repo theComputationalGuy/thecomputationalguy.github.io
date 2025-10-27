@@ -1,2 +1,0 @@
-files/sam2.1_b.pt filter=lfs diff=lfs merge=lfs -text
-files/*.pt filter=lfs diff=lfs merge=lfs -text
