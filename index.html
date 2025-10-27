@@ -1,5 +1,148 @@
 <!doctype html>
 <html lang="en">
+<head id="head-placeholder"></head>
+<body>
+  <div id="header-placeholder"></div>
+
+  <main class="container hero-page">
+    <!-- HERO -->
+    <section class="hero-grid">
+      <div class="hero-photo-wrap">
+        <!-- local private image will show locally; fallback to placeholder if missing -->
+        <img src="images/myself.jpg" alt="Khalid Shaikh" class="profile-img"
+             onerror="this.src='images/placeholder.jpg'">
+      </div>
+
+      <div class="hero-copy">
+        <h1 class="name">Khalid Shaikh</h1>
+        <p class="tagline">Researcher — deep learning, 3D vision, generative models.</p>
+
+        <p class="summary">
+          I build models that connect perception to physical reasoning. Current work: 3D reconstruction,
+          causal representation, and physics-guided generative systems. I publish implementations and reproducible code.
+        </p>
+
+        <div class="ctas">
+          <a class="btn" href="projects.html">View Projects</a>
+          <a class="btn ghost" href="about.html">Read About Me</a>
+          <a class="btn" href="contact.html">Contact</a>
+          <a class="btn link" href="files/resume.pdf" download><i class="fa-solid fa-download"></i> Resume</a>
+        </div>
+
+        <ul class="social-inline" aria-label="profiles">
+          <li><a href="https://github.com/<USERNAME>" target="_blank" rel="noopener">GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/<USERNAME>" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://scholar.google.com/citations?user=<ID>" target="_blank" rel="noopener">Scholar</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- HIGHLIGHTS -->
+    <section class="highlights">
+      <h2>Selected highlights</h2>
+      <div class="cards">
+        <article class="card">
+          <h3>Text→3D pipeline</h3>
+          <p>Reproducible implementation of a text-to-3D pipeline, with evaluation and ablations.</p>
+          <p class="meta"><small>Tools: NeRF, DreamFusion, PyTorch</small></p>
+          <p><a href="https://github.com/<USERNAME>/text2mesh" class="card-link">Code</a></p>
+        </article>
+
+        <article class="card">
+          <h3>DUST3R implementation</h3>
+          <p>Modular reimplementation used for experiments on physics-guided generation.</p>
+          <p class="meta"><small>Tools: JAX, PyTorch, torchvision</small></p>
+          <p><a href="projects.html#dust3r" class="card-link">Details</a></p>
+        </article>
+
+        <article class="card">
+          <h3>3D reconstruction</h3>
+          <p>Fast, robust pipeline for multi-view reconstruction and evaluation on public datasets.</p>
+          <p class="meta"><small>Tools: Open3D, COLMAP, custom loss functions</small></p>
+          <p><a href="projects.html#reconstruction" class="card-link">Read</a></p>
+        </article>
+      </div>
+    </section>
+
+    <!-- QUICK CONTACT -->
+    <section class="quick-contact">
+      <h2>Work with me</h2>
+      <p>If you're looking for collaboration, code reviews, or research partnership, email me at
+        <a href="mailto:you@example.com">you@example.com</a> or use the contact page.</p>
+    </section>
+  </main>
+
+  <div id="footer-placeholder"></div>
+
+  <script>
+    // load shared fragments (head, header, footer)
+    async function loadFragment(id, file) {
+      const el = document.getElementById(id);
+      try {
+        const r = await fetch(file, {cache: "no-store"});
+        if (!r.ok) { el.innerHTML = ''; return; }
+        el.innerHTML = await r.text();
+      } catch (e) { el.innerHTML = ''; }
+    }
+    loadFragment('head-placeholder','head.html');
+    loadFragment('header-placeholder','header.html');
+    loadFragment('footer-placeholder','footer.html');
+  </script>
+
+  <style>
+    /* page-specific layout (keeps using your global vars and base styles) */
+    .hero-page { padding: 28px 16px 80px; max-width: 1100px; margin: 0 auto; }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 160px 1fr;
+      gap: 28px;
+      align-items: center;
+    }
+
+    .hero-photo-wrap { text-align: center; }
+    .profile-img { width: 150px; height: 150px; border-radius: 50%; object-fit: cover; box-shadow: 0 6px 20px rgba(0,0,0,0.5); }
+
+    .name { margin: 0; font-size: 28px; }
+    .tagline { margin: 6px 0 12px; color: var(--muted); font-weight: 600; }
+    .summary { margin:0 0 16px; line-height:1.5; color: #dfe9f8; }
+
+    .ctas { display:flex; gap:10px; flex-wrap:wrap; margin-bottom:12px; }
+    .btn {
+      display:inline-block; padding:8px 12px; border-radius:8px; text-decoration:none; background:var(--accent); color:#fff;
+      font-weight:600;
+    }
+    .btn.ghost { background:transparent; border:1px solid rgba(255,255,255,0.06); color:var(--muted); }
+    .btn.link { background:transparent; color:var(--accent); border:none; padding-left:6px; padding-right:6px; }
+
+    .social-inline { list-style:none; padding:0; margin:8px 0 0; display:flex; gap:10px; }
+    .social-inline li { display:inline; }
+    .social-inline a { color:var(--muted); text-decoration:none; font-size:14px; }
+
+    .highlights { margin-top:34px; }
+    .cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:14px; margin-top:12px; }
+    .card { background:rgba(255,255,255,0.02); padding:16px; border-radius:10px; }
+    .card h3 { margin:0 0 6px; }
+    .card .meta { color:var(--muted); margin:6px 0; }
+    .card-link { color:var(--accent); text-decoration:none; font-weight:600; }
+
+    .quick-contact { margin-top:32px; padding:16px; background:rgba(255,255,255,0.02); border-radius:10px; }
+
+    /* responsive tweaks */
+    @media (max-width:740px){
+      .hero-grid { grid-template-columns: 1fr; text-align:center; }
+      .hero-copy { order:2 }
+      .hero-photo-wrap { order:1 }
+      .profile-img { margin:0 auto; }
+      body { padding-top: 84px; } /* if header is fixed and taller on mobile */
+    }
+  </style>
+</body>
+</html>
+
+
+<!-- <!doctype html>
+<html lang="en">
 
 <head id="head-placeholder"></head>
 
@@ -12,7 +155,7 @@
       <h2>About Me</h2>
       <p>I'm Khalid Shaikh, a researcher focused on deep learning, 3D vision, and generative models. I work on reconstruction, cross-modal attention, and physics-based neural systems.</p>
       <p>My goal is to build models that connect perception with physical understanding - making AI systems that can see, reason, and act in 3D worlds.</p>
-    </section> -->
+    </section> 
 
     <section class="features">
       <article>
@@ -46,4 +189,4 @@
 
   <script src="https://kit.fontawesome.com/c7c197e250.js" crossorigin="anonymous"></script>
 </body>
-</html>
+</html> -->
