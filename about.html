@@ -1,11 +1,120 @@
 <!doctype html>
 <html lang="en">
+<head id="head-placeholder"></head>
+<body>
+  <div id="header-placeholder"></div>
+
+  <main class="container about-page">
+    <h1>About</h1>
+
+    <section class="story">
+      <div class="story-grid">
+        <div class="photo">
+          <img src="images/myself.jpg" alt="Khalid Shaikh" class="profile-img" onerror="this.src='images/placeholder.jpg'">
+        </div>
+        <div class="bio">
+          <h2>My story</h2>
+          <p>
+            I am Khalid Shaikh, a researcher focused on deep learning, 3D vision, and generative models.
+            I build reproducible systems for reconstruction, text→3D, and physics-aware generative pipelines.
+            My work emphasizes modular implementations, rigorous evaluation, and clear experiment tracking.
+          </p>
+
+          <p>
+            I publish code alongside papers and prioritize reproducibility and practical evaluation over black-box results.
+            Current interests include NeRF-style reconstruction, causal representation learning, and neural operators for physical simulation.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="skills">
+      <h2>Skills & tools</h2>
+      <ul class="skill-list">
+        <li><strong>Frameworks:</strong> PyTorch, JAX, TensorFlow</li>
+        <li><strong>3D / Vision:</strong> COLMAP, Open3D, NeRF, PyTorch3D</li>
+        <li><strong>Generative:</strong> Stable Diffusion, CLIP, diffusion models</li>
+        <li><strong>MLOps:</strong> Docker, MLflow, GitHub Actions, Kubernetes</li>
+        <li><strong>Languages:</strong> Python, C++, Bash</li>
+      </ul>
+    </section>
+
+    <section class="education">
+      <h2>Education & positions</h2>
+      <ul>
+        <li><strong>M.S. / PhD (in progress or completed)</strong> — institution, department, years</li>
+        <li><strong>Research Intern</strong> — lab / company, short note</li>
+      </ul>
+    </section>
+
+    <section class="publications">
+      <h2>Selected publications</h2>
+      <ol>
+        <li><a href="#" class="card-link">Title — Conference/Journal (year)</a></li>
+        <li><a href="#" class="card-link">Title — Conference/Journal (year)</a></li>
+      </ol>
+      <p class="muted">Full list available on <a href="https://scholar.google.com" target="_blank" rel="noopener">Google Scholar</a>.</p>
+    </section>
+
+    <section class="contact-cta">
+      <h2>Contact</h2>
+      <p>For collaboration or code questions email <a href="mailto:you@example.com">you@example.com</a>.</p>
+      <p>
+        <a class="btn link" href="files/resume.pdf" download>Download Resume</a>
+        <a class="btn" href="projects.html">View Projects</a>
+      </p>
+    </section>
+  </main>
+
+  <div id="footer-placeholder"></div>
+
+  <script>
+    async function loadFragment(id, file) {
+      const el = document.getElementById(id);
+      try {
+        const r = await fetch(file, {cache: "no-store"});
+        if (!r.ok) { el.innerHTML = ''; return; }
+        el.innerHTML = await r.text();
+      } catch (e) { el.innerHTML = ''; }
+    }
+    loadFragment('head-placeholder','head.html');
+    loadFragment('header-placeholder','header.html');
+    loadFragment('footer-placeholder','footer.html');
+  </script>
+
+  <style>
+    .about-page { max-width: 900px; padding: 32px 16px 80px; margin: 0 auto; }
+    .story-grid { display: grid; grid-template-columns: 160px 1fr; gap: 20px; align-items: start; }
+    .profile-img { width: 150px; height: 150px; border-radius: 50%; object-fit: cover; box-shadow: 0 6px 18px rgba(0,0,0,0.45); }
+    .bio h2 { margin-top: 0; }
+    .skill-list { display: grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap: 8px; padding-left: 0; list-style: none; margin: 8px 0 0; }
+    .skill-list li { background: rgba(255,255,255,0.02); padding: 10px; border-radius: 8px; }
+    .education ul, .publications ol { margin: 8px 0 0 18px; }
+    .muted { color: var(--muted); }
+    .contact-cta { margin-top: 22px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 10px; }
+    .card-link { color: var(--accent); text-decoration: none; font-weight:600; }
+    .card-link:hover { text-decoration: underline; }
+
+    @media (max-width:740px) {
+      .story-grid { grid-template-columns: 1fr; text-align: center; }
+      .bio { order: 2; }
+      .photo { order: 1; }
+      .profile-img { margin: 0 auto; }
+      body { padding-top: 84px; }
+    }
+  </style>
+</body>
+</html>
+
+
+<!-- <!doctype html>
+<html lang="en">
     <head id="head-placeholder"></head>
 <body>
     <div id="header-placeholder"></div>
     
     <main class="container">
-    <!-- <h2>About</h2> -->
+    <!-- <h2>About</h2> --
     <section class="hero">
       <img src="images/myself.jpg" alt="Khalid Shaikh" class="profile-img">
       <h2>About Me</h2>
@@ -18,7 +127,7 @@
         <li>Deep learning</li>
         <li>3D reconstruction</li>
         <li>Web / tools</li>
-    </ul> -->
+    </ul> --
     </main>
 
     <div id="footer-placeholder"></div>
@@ -36,4 +145,4 @@
 
     <script src="https://kit.fontawesome.com/c7c197e250.js" crossorigin="anonymous"></script>
 </body>
-</html>
+</html> -->
