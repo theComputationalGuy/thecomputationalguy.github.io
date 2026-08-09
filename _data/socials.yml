@@ -8,6 +8,10 @@ github:
   logo: fa-brands fa-square-github
   title: Github Page
   url: https://github.com/theComputationalGuy
+linkedin:
+  logo: fa-brands fa-square-linkedin
+  title: LinkedIn
+  url: https://www.linkedin.com/in/khalid-s-shaikh/
 # scholar_userid: qc6CJjYAAAAJ # your Google Scholar ID
 # wechat_qr: # filename of your wechat qr-code saved as an image (e.g., wechat-qr.png if saved to assets/img/wechat-qr.png)
 # whatsapp_number: # your WhatsApp number (full phone number in international format. Omit any zeroes, brackets, or dashes when adding the phone number in international format.)
