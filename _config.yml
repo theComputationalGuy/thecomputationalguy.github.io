@@ -172,7 +172,9 @@ giscus:
 # Optional: Set default categories and tags for posts from each source.
 external_sources:
   - name: substack.com
-    rss_url: https://substack.com/@thecomputationalguy/note/p-192687149?utm_source=notes-share-action&utm_medium=web
+    posts:
+      - url: https://substack.com/@thecomputationalguy/note/p-192687149?utm_source=notes-share-action&utm_medium=web
+        published_date: 2026-03-31
     categories: [external-posts]
     tags: [misc]
   # - name: medium.com
