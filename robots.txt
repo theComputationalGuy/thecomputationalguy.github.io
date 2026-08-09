@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://thecomputationalguy.github.io/sitemap.xml
+Sitemap: https://thecomputationalguy.github.ioblank/sitemap.xml
