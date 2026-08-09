@@ -8,7 +8,8 @@ profile:
   align: right
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
-  more_info: blank
+  more_info:
+    blank
     # <p>555 your office number</p>
     # <p>123 your address street</p>
     # <p>Your City, State 12345</p>
@@ -27,11 +28,11 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-I am Khalid. I have completed my Integrated Master's in Mathematics from Sardar Vallabhbhai National Institute of Technology with a gold medal (first position in the department). 
+I am Khalid. I have completed my Integrated Master's in Mathematics from Sardar Vallabhbhai National Institute of Technology with a gold medal (first position in the department).
 
 I am currently working at the Visual Computing and Embodied AI research group at TCS Research. My work focuses on object pose estimation and tracking in egocentric settings.
 
-Apart from this, I am interested in Algebraic Geometry and Differential Geometry. I like to study the modern neural networks from an advanced mathematical perspective using these fields. 
+Apart from this, I am interested in Algebraic Geometry and Differential Geometry. I like to study the modern neural networks from an advanced mathematical perspective using these fields.
 
 <!-- Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](https://www.reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
 
