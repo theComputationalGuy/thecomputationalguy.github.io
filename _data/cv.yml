@@ -1,7 +1,6 @@
 cv:
   name: Khalid S. Shaikh
   label: Researcher
-  email: einstein@example.com
   location: Kolkata, West Bengal
   image: ""
   summary: A researcher and mathematician in the field of 3D Computer Vision and Embodied AI
@@ -20,18 +19,25 @@ cv:
 
   sections:
     Education:
-      - institution: Sardar Vallabhbhai National Institute of Technology
+      - institution: Sardar Vallabhbhai National Institute of Technology (SVNIT)
         location: Surat, Gujarat
-        url: https://www.uzh.ch/
+        url: https://www.svnit.ac.in/
         area: Mathematics
         studyType: Integrated M.Sc.
         start_date: 2020
         end_date: 2025
-        score: ""
-        courses: "Theory of Relativity"
-        highlights:
-          - Description 1.
-          - Description 2.
+        score: 9.61 CGPA
+
+      - institution: St. Peter's Junior College of Science
+        location: Vasai, Maharashtra
+        area: Science
+        studyType: Junior College
+        score: 82.30%
+
+      - institution: St. Augustine's High School
+        location: Vasai, Maharashtra
+        studyType: School
+        score: 96.80%
 
     Experience:
       - company: TCS Research
@@ -78,11 +84,11 @@ cv:
 
     Skills:
       - name: Computer Vision
-        icon: fa-solid fa-hashtag
+        icon: fa-solid
         keywords: "Segmentation, Detection, Flow Matching, Tracking, Optical Flow, 3D Reconstruction, Multi-view Geometry"
 
       - name: Mathematics
-        icon: fa-solid fa-hashtag
+        icon: fa-solid
         keywords: "Probability, Statisitcs, Measure Theory, Functional Analysis, Real Analysis"
 
     Languages:
