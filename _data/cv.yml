@@ -14,7 +14,7 @@ cv:
 
   address:
     city: Kolkata
-    state: West Bengal
+    region: West Bengal
     postalCode: 700135
     countryCode: India
 
