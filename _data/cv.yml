@@ -2,8 +2,8 @@ cv:
   name: Khalid S. Shaikh
   label: Researcher
   location: Kolkata, West Bengal
-  image: ""
-  summary: A researcher and mathematician in the field of 3D Computer Vision and Embodied AI
+  image: prof_pic.jpg
+  summary: "A researcher and mathematician in the field of 3D Computer Vision and Embodied AI"
 
   social_networks:
     - network: GitHub
@@ -34,13 +34,13 @@ cv:
         start_date: 2017
         end_date: 2019
         studyType: Junior College
-        score: 82.30%
+        score: "82.30%"
 
       - institution: St. Augustine's High School
         location: Vasai, Maharashtra
         studyType: School
         end_date: 2017
-        score: 96.80%
+        score: "96.80%"
 
     Experience:
       - company: TCS Research
@@ -48,14 +48,14 @@ cv:
         location: Kolkata, West Bengal
         start_date: 2025
         end_date: present
-        summary: Working on object detection, segmentation, pose estimation and tracking, and motion understanding in egocentric settings
+        summary: "Working on object detection, segmentation, pose estimation and tracking, and motion understanding in egocentric settings"
         highlights:
           - 6DoF Pose Estimation
           - Object detection
           - Object segmentation
 
     Awards:
-      - title: Department Gold Medal
+      - title: Gold Medal
         date: 2025-10-08
         awarder: SVNIT
         summary: Awarded for obtaining first position in the department
