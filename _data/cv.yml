@@ -80,7 +80,7 @@ cv:
       - name: Computer Vision
         icon: fa-solid fa-hashtag
         keywords: "Segmentation, Detection, Flow Matching, Tracking, Optical Flow, 3D Reconstruction, Multi-view Geometry"
-      
+
       - name: Mathematics
         icon: fa-solid fa-hashtag
         keywords: "Probability, Statisitcs, Measure Theory, Functional Analysis, Real Analysis"
