@@ -1,80 +1,30 @@
 cv:
-  name: Khalid S. Shaikh
-  label: Researcher
-  location: Kolkata, West Bengal
-  image: prof_pic.jpg
-  summary: "A researcher and mathematician in the field of 3D Computer Vision and Embodied AI"
-
+  name: John Doe
+  location: San Francisco, CA
+  email: john.doe@email.com
+  website: https://rendercv.com/
   social_networks:
-    - network: GitHub
-      username: theComputationalGuy
     - network: LinkedIn
-      username: example
-
-  address:
-    city: Kolkata
-    region: West Bengal
-    postalCode: 700135
-    countryCode: India
-
+      username: rendercv
+    - network: GitHub
+      username: rendercv
   sections:
-    Education:
-      - institution: Sardar Vallabhbhai National Institute of Technology (SVNIT)
-        location: Surat, Gujarat
-        url: https://www.svnit.ac.in/
-        area: Mathematics
-        studyType: Integrated Master of Science
-        start_date: 2020
-        end_date: 2025
-        score: 9.61 CGPA
-
-      - institution: St. Peter's Junior College of Science
-        location: Vasai, Maharashtra
-        area: Science
-        start_date: 2017
-        end_date: 2019
-        studyType: Junior College
-        score: "82.30%"
-
-      - institution: St. Augustine's High School
-        location: Vasai, Maharashtra
-        studyType: School
-        end_date: 2017
-        score: "96.80%"
-
-    Experience:
-      - company: TCS Research
-        position: Researcher
-        location: Kolkata, West Bengal
-        start_date: 2025
-        end_date: present
-        summary: "Working on object detection, segmentation, pose estimation and tracking, and motion understanding in egocentric settings"
+    Welcome to RenderCV:
+      - RenderCV reads a CV written in a YAML file, and generates a PDF with professional typography.
+      - See the [documentation](https://docs.rendercv.com) for more details.
+    education:
+      - institution: Princeton University
+        area: Computer Science
+        degree: PhD
+        date:
+        start_date: 2018-09
+        end_date: 2023-05
+        location: Princeton, NJ
+        summary:
         highlights:
-          - 6DoF Pose Estimation
-          - Object detection
-          - Object segmentation
+          - "Thesis: Efficient Neural Architecture Search for Resource-Constrained Deployment"
+          - "Advisor: Prof. Sanjeev Arora"
+          - NSF Graduate Research Fellowship, Siebel Scholar (Class of 2022)
 
-    Awards:
-      - title: Gold Medal
-        date: 2025-10-08
-        awarder: SVNIT
-        summary: Awarded for obtaining first position in the department
-
-    Skills:
-      - name: Computer Vision
-        icon: fa-solid
-        keywords: "Segmentation, Detection, Flow Matching, Tracking, Optical Flow, 3D Reconstruction, Multi-view Geometry"
-
-      - name: Mathematics
-        icon: fa-solid
-        keywords: "Probability, Statisitcs, Measure Theory, Functional Analysis, Real Analysis"
-
-    Languages:
-      - name: Hindi
-        summary: "Native speaker"
-
-      - name: Marathi
-        summary: "Fluent"
-
-      - name: English
-        summary: "Fluent"
+design:
+  theme: sb2nov
