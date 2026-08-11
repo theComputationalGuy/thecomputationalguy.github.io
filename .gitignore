@@ -1,4 +1,5 @@
 _site
+.vscode
 .bundle
 .DS_store
 .idea
@@ -19,3 +20,5 @@ vendor
 # Python bytecode from bin/ helper scripts
 __pycache__/
 *.pyc
+
+TODO.md
