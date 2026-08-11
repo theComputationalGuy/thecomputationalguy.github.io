@@ -1,0 +1,8 @@
+.table-cv td:first-child {
+  width: 100px;
+  min-width: 100px;
+}
+
+.table-cv .badge {
+  min-width: 100px;
+}
